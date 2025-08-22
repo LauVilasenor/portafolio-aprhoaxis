@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+    --color-fondo: #181818; /* Color de fondo */
+    --color-texto: #ffffff; /* Color del texto */
+    --color-enlace: #f02cd6; /* Color de los enlaces */
+    --color-boton: #00E5FF; /* Color del botón */
+    --color-boton-hover: #00E5FF; /* Color del botón al pasar el ratón */
+
+
+}
+
+* {
+     padding: 0;
+    margin: 0;
+ }
+
+    body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    box-sizing: border-box;
+}
+
+.header{
+    padding: 2% 0% 0% 15%;
+}
+.header__menu{
+    display: flex;
+    gap: 80px; /*espacio entre los enlaces*/
+}
+
+.header__menu__link{
+    font-family: "Montserrat", sans-serif; /*fuente del texto*/
+    font-size: 1.8rem; /*tamaño del texto*/
+    font-weight: 600; /*peso del texto*/
+    color: var(--color-enlace);
+    text-decoration: none;
+
+}
+
+
+
+.presentacion{
+    display: flex; /*flexbox para alinear el contenido*/
+    align-items: center;
+    padding: 5% 15%;
+    justify-content: space-between;
+    gap: 82px; /*espacio entre el contenido y la imagen*/
+}
+
+.presentacion__contenido{
+    width: 50%;    /*ancho del contenido*/
+    display: flex; /*flexbox para alinear el contenido*/
+    flex-direction: column; /*columna para alinear el contenido*/
+    gap: 40px; /*espacio entre los elementos*/
+}
+
+
+.presentacion__contenido__titulo{
+    font-size: 4.5rem; /*tamaño del título*/
+    font-family: "Krona One", sans-serif; /*fuente del título*/
+}
+
+.titulo-destaque {
+    color: var(--color-boton); /*color del texto destacado*/ 
+}
+
+.presentacion__contenido__texto{
+    font-family: "Montserrat", sans-serif; /*fuente del texto*/
+    font-size: 1.5rem; /*tamaño del texto*/
+}
+
+.presentacion__enlaces{
+    display: flex;/*flexbox para alinear los enlaces*/
+    justify-content:space-between;
+    flex-direction: column; /*columna para alinear los enlaces*/
+    align-items: center;
+    gap:32px; /*espacio entre los enlaces*/
+  
+}
+
+.presentacion__enlaces__subtitulo{
+    font-family: "Krona One", sans-serif;
+    font-size: 1.5rem; /*tamaño del subtitulo*/
+    font-weight: 400;
+}
+.presentacion__enlaces__link{
+    width: 50%; /*ancho de los enlaces*/
+    text-align: center;
+    padding: 21.5px 0; /*padding para los enlaces*/
+    border-radius: 8px; /*botones redondos*/
+    font-family: "Montserrat", sans-serif; /*fuente del texto*/
+    font-size: 1.5rem; /*tamaño del texto*/
+    font-weight: 600; 
+    text-decoration: none; /*sin subrayado*/
+    color: var(--color-enlace); /*color del texto*/
+    border: 2px solid var(--color-boton); /*borde del enlace*/
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.presentacion__enlaces__link:hover{ /*seleccionar el enlace al pasar el ratón*/
+    background-color: var(--color-boton); /*color de fondo al pasar el ratón*/
+    color: var(--color-enlace);
+    border: 2px solid var(--color-boton); /*borde del enlace*/
+}
+
+.presentacion_imagen{
+    width: 50%;
+}
+
+.footer{
+    background-color: var(--color-fondo);  /*color de fondo del pie de página*/
+    padding: 24px; /*padding del pie de página*/
+    text-align: center; /*alinear el texto al centro*/
+    font-family: "Krona One", sans-serif; /*fuente del texto*/
+    color: var(--color-boton); /*color del texto*/
+    font-size: 1rem; /*tamaño del texto*/
+    font-weight: 400;
+
+}
+
+@media (max-width: 768px) {
+    .presentacion{
+        flex-direction: column; /*columna para alinear el contenido*/
+        text-align: center; /*alinear el texto al centro*/
+    }
+
+    .presentacion__contenido{
+        width: 100%; /*ancho del contenido*/
+        align-items: center; /*alinear el contenido al centro*/
+    }
+
+    .presentacion_imagen{
+        width: 100%; /*ancho de la imagen*/
+    }
+
+    .presentacion__enlaces{
+        flex-direction: row; /*fila para alinear los enlaces*/
+        flex-wrap: wrap; /*ajustar los enlaces*/
+        justify-content: center; /*alinear los enlaces al centro*/
+    }
+
+    .presentacion__enlaces__link{
+        width: 100%; /*ancho de los enlaces*/
+    }
+
+    .header{
+        padding: 2% 5% 0% 5%;
+    }
+
+    .header__menu{
+        gap: 40px; /*espacio entre los enlaces*/
+    }
+}
