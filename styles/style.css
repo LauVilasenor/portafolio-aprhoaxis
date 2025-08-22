@@ -58,7 +58,7 @@
 
 
 .presentacion__contenido__titulo{
-    font-size: 4.5rem; /*tamaño del título*/
+    font-size: 2rem; /*tamaño del título*/
     font-family: "Krona One", sans-serif; /*fuente del título*/
 }
 
@@ -154,4 +154,5 @@
     .header__menu{
         gap: 40px; /*espacio entre los enlaces*/
     }
+
 }
